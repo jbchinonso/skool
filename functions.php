@@ -138,7 +138,7 @@ add_action( 'widgets_init', 'skool_widgets_init' );
  * Enqueue scripts and styles.
  */
 function skool_scripts() {
-	wp_enqueue_style( 'skool-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'skool-style', get_template_directory_uri(). '/assets/css/style.css', array(), _S_VERSION );
 	wp_style_add_data( 'skool-style', 'rtl', 'replace' );
 
 	wp_enqueue_style('skool-bootstrap', get_template_directory_uri() . '/assets/bootstrap.min.css', [], _S_VERSION);
