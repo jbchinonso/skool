@@ -10,6 +10,7 @@ class Skool_Registration_Page{
         add_action('admin_menu', [$this, 'skool_add_admin_menu'], 10);
 
         add_action('admin_menu', [$this,'skool_view_all_students_page'], 10,);
+        add_action('admin_menu', [$this,'skool_view_students_profile'], 10,);
     }
 
     function skool_add_admin_menu()
@@ -37,6 +38,19 @@ public function skool_view_all_students_page()
     );
 }
 
+
+public function skool_view_students_profile()
+{
+    add_submenu_page(
+        'student-registration', 
+        'Student Profile', 
+        '', 
+        'manage_options', 
+        'student-profile', 
+        [$this,'school_view_students_profile'],
+    );
+}
+
 public function school_student_registration_page()
 {
     require_once __DIR__ . '/templates/studentRegistration.php';
@@ -46,8 +60,12 @@ public function school_student_registration_page()
 public function school_view_all_students_page(){
     require_once __DIR__ . '/templates/viewAllStudents.php';
 }
+
+public function school_view_students_profile(){
+    require_once __DIR__ . '/templates/studentProfile.php';
 }
 
+}
 
 
 new Skool_Registration_Page();

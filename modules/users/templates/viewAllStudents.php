@@ -20,7 +20,7 @@
         <div class="header">
             <h1>All Students</h1>
             <div class="header-actions">
-                <a href="index.html" class="btn btn-primary">+ Register New Student</a>
+                <a href="admin.php?page=student-registration" class="btn btn-primary">+ Register New Student</a>
             </div>
         </div>
 
@@ -89,7 +89,7 @@
             <!-- No Students State -->
             <div id="noStudents" class="no-students" style="display: none;">
                 <p>No students found</p>
-                <a href="index.html" class="btn btn-primary">Register First Student</a>
+                <a href="admin.php?page=student-registration" class="btn btn-primary">Register First Student</a>
             </div>
 
             <!-- Pagination -->
@@ -204,7 +204,7 @@
                         <div style="font-size: 12px; color: #999;">${student.parent_phone}</div>
                     </td>
                     <td>
-                        <a href="student_profile.html?id=${student.user_id}" class="action-btn">View Profile</a>
+                        <a href="admin.php?page=student-profile&id=${student.user_id}" class="action-btn">View Profile</a>
                     </td>
                 `;
                 tbody.appendChild(row);
