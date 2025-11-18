@@ -188,6 +188,8 @@ require get_template_directory() . '/inc/customizer.php';
 
 require get_template_directory() . '/modules/users/user.php';
 
+require get_template_directory() . '/modules/classes/classes.php';
+
 class Bootstrap_Nav_Walker extends Walker_Nav_Menu
 {
 
